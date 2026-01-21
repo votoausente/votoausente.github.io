@@ -207,6 +207,7 @@ section:nth-of-type(2) .row {
 .img-fluid {
     max-width: 80%;
     height: auto;
+;
 }
 
 .row.solapamiento .img-fluid {
@@ -490,3 +491,155 @@ main > section:first-child {
     max-width: 1000px;
     margin: 0 auto;
 }
+.bloque-figura {
+  display: flex;
+  justify-content: center;   /* ← centra horizontalmente */
+}
+
+/* CONTENEDOR CENTRADO */
+.figura-layout {
+    max-width: 1100px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 8fr 1fr;
+    gap: 3rem;
+
+    align-items: center;   /* ← ESTO ES LA CLAVE */
+}
+
+.figura-grande img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.texto-figura h2 {
+    margin-bottom: 0.5rem;
+}
+
+.texto-figura h3 {
+    font-weight: 400;
+    color: #555;
+}
+@media (max-width: 768px) {
+    .figura-layout {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .texto-figura {
+        margin-top: 2rem;
+    }
+}
+
+
+/* RESET SUAVE */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* HEADER */
+header {
+  padding: 1.5rem 3rem;
+}
+
+/* INTRO */
+.bloque-intro {
+  max-width: 900px;
+  margin: 4rem auto 6rem;
+  text-align: center;
+}
+
+.bloque-intro img {
+  margin-bottom: 2rem;
+}
+
+.bloque-intro p {
+  max-width: 700px;
+  margin: 1rem auto 0;
+}
+
+/* BLOQUES SIDE BY SIDE */
+.bloque-side {
+  margin: 6rem auto;
+}
+
+.side-layout {
+  max-width: 1100px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+/* Alternancia */
+.side-layout.invertido {
+  direction: rtl;
+}
+
+.side-layout.invertido > * {
+  direction: ltr;
+}
+
+/* Texto */
+.side-texto h3 {
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .side-layout {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+}
+
+/* RESET SUAVE */
+body {
+  line-height: 1.6;
+}
+
+/* HEADER */
+header {
+  padding: 1.5rem 3rem;
+}
+
+/* INTRO */
+.bloque-intro {
+  max-width: 800px;
+  margin: 5rem auto;
+  text-align: center;
+}
+
+.bloque-intro h2 {
+  margin-bottom: 1rem;
+}
+
+.grid-imagenes {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.75rem;
+}
+
+.grid-imagenes img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.imagen-ancha {
+  max-width: 1200px;   /* controla el tamaño */
+  margin: 4rem auto;   /* centra horizontal */
+}
+
+img.w-100 {
+  max-height: 500px;
+  object-fit: cover;
+}
+
+
