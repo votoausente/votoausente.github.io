@@ -84,7 +84,8 @@ main {
 
 .texto-caja .btn-outline-alternative {
     display: block;
-    margin: 1.5rem auto 0;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 .btn-outline-alternative:hover a {
@@ -119,9 +120,14 @@ section:first-of-type > .text-center p {
     flex-direction: column;
     height: 100%;
 }
-
+.texto-caja h2 {
+    color: rgb(229, 156, 107); 
+    font-size: 4rem;
+    margin-left: 60px;
+    margin-right: 60px;
+}
 .texto-caja p {
-    font-size: 1.5rem;   /* texto más grande */
+    font-size: 20px;   /* texto más grande */
     line-height: 1.6;   /* mejor lectura */
     margin-bottom: 0;
     color: rgb(229, 156, 107);     /* marrón oscuro, no negro puro */
@@ -231,12 +237,6 @@ section:first-of-type {
 
 section:nth-of-type(2) .row {
     align-items: center;
-}
-
-.img-fluid {
-    max-width: 80%;
-    height: auto;
-;
 }
 
 .row.solapamiento .img-fluid {
@@ -492,22 +492,23 @@ main {
   background: #f2f2f2;
 }
 .bloque-mosaico {
-    margin: 6rem 0;
+    margin: auto;
 }
 
 /* MOSAICO DE LADO A LADO */
 .mosaico-full {
     display: grid;
     grid-template-columns: repeat(6, 1fr); /* cambia a 5 si quieres */
-    width: 100%;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    margin-right: calc(-50vw + 50%);
 }
-
 .mosaico-full img {
     width: 100%;
-    height: 220px;
     object-fit: cover;
     display: block;
 }
+
 main > section:first-child {
     margin-top: 0;
 }
@@ -670,5 +671,4 @@ img.w-100 {
   max-height: 500px;
   object-fit: cover;
 }
-
 
